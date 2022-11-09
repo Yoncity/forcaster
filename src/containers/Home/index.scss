@@ -1,0 +1,83 @@
+@use "../../styles/abstracts/" as *;
+
+.home_container {
+  display: grid;
+  place-items: center;
+  grid-template-columns: 1fr;
+  height: 100vh;
+  background-color: $background_main;
+  position: absolute;
+  z-index: 1;
+  &__wrapper {
+    margin: 0 $main_content_margin;
+    display: grid;
+    place-items: center;
+    padding: $container_padding_2x;
+    &__content {
+      margin-top: $container_margin_2x * 3;
+      &__description {
+        font-size: $home_page_content_font_size;
+        text-align: center;
+        color: #fff;
+        word-spacing: 5px;
+        margin: 0 $main_content_margin * 2;
+        // letter-spacing: 5px;
+      }
+      display: grid;
+      place-items: center;
+      &__actions {
+        display: flex;
+        margin-top: $container_margin_2x * 3;
+        gap: $container_margin_2x * 2;
+        button {
+          font-size: $home_page_action_font_size;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 765px) {
+  .home_container {
+    &__wrapper {
+      margin: 0 $container_margin_2x;
+      img {
+        width: 280px;
+      }
+      &__content {
+        &__description {
+          margin: 0 $container_margin_2x * 2;
+          font-size: $home_page_action_font_size_small;
+        }
+        &__actions {
+          button {
+            font-size: $home_page_action_font_size_small;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 766px) and (max-width: 1024px) {
+  .home_container {
+    &__wrapper {
+      margin: 0 $container_margin_2x;
+      img {
+        width: 320px;
+      }
+      &__content {
+        &__description {
+          margin: 0 $container_margin_2x * 4;
+          font-size: $home_page_action_font_size_medium;
+        }
+        &__actions {
+          // margin-top: $container_margin_2x;
+          button {
+            font-size: $home_page_action_font_size_medium;
+          }
+        }
+      }
+    }
+  }
+}

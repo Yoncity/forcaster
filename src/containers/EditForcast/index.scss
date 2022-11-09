@@ -1,0 +1,81 @@
+@use "../../styles/abstracts/" as *;
+
+.edit_forcast_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: $background_main;
+  position: absolute;
+  z-index: -1;
+  &.show_edit_forcast {
+    z-index: 4;
+    animation: slide_in_from_bottom 0.6s ease-in-out forwards;
+  }
+  &.hide_edit_forcast {
+    z-index: 4;
+    animation: slide_out_from_top 0.6s ease-in-out forwards,
+      hide 0.1s linear 0.6s forwards;
+  }
+  &__header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 70px;
+    &__nav {
+      display: flex;
+      align-items: center;
+      margin-left: $main_content_margin / 2;
+      &__back {
+        width: 32px;
+        margin-right: $container_margin_2x;
+        cursor: pointer;
+      }
+      &__title {
+        font-size: 32px;
+        font-weight: bold;
+        color: $primary_text;
+      }
+    }
+    &__actions {
+      display: flex;
+      gap: $container_margin_2x;
+      margin: auto $main_content_margin / 2 auto auto;
+      padding: $container_padding;
+    }
+  }
+  &__content {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    position: relative;
+  }
+}
+
+@media (max-width: 765px) {
+  .edit_forcast_container {
+    &__header {
+      &__nav {
+        margin-left: $container_margin;
+        &__back {
+          width: 18px;
+          margin-right: $container_margin_2x;
+          cursor: pointer;
+        }
+        &__title {
+          font-size: 18px;
+        }
+      }
+      &__actions {
+        margin: auto $container_margin / 2 auto auto;
+        .button {
+          font-size: 10px;
+          padding: 5px 10px;
+          border-radius: $border_radius_1x;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+.bar_chart_container {
+  flex: 1;
+}
+
+@media (max-width: 1023px) {
+  svg {
+    scale: 0.5;
+    rotate: -90deg;
+    g {
+      font-size: 20px;
+    }
+  }
+}

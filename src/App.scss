@@ -1,0 +1,12 @@
+@use "./styles/abstracts/" as *;
+
+.app_container {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  // max-height: 100vh;
+  width: 100vw;
+  // max-width: 100vw;
+  overflow: hidden;
+  background-color: $background_main;
+}

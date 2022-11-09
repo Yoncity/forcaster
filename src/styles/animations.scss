@@ -1,0 +1,35 @@
+@keyframes hide {
+  to {
+    z-index: -1;
+  }
+}
+@keyframes slide_in_from_bottom {
+  from {
+    // opacity: 0.3;
+    translate: 0 100%;
+  }
+  to {
+    // opacity: 1;
+    translate: 0 0%;
+  }
+}
+
+@keyframes slide_out_from_top {
+  from {
+    // opacity: 1;
+    translate: 0 0%;
+  }
+  to {
+    // opacity: 0.3;
+    translate: 0 100%;
+  }
+}
+
+@keyframes slide_in_from_left {
+  from {
+    translate: 100% 0;
+  }
+  to {
+    translate: 0% 0;
+  }
+}
